@@ -18,7 +18,9 @@ class FeedbackResponse(BaseModel):
     completeness: float
     clarity: float
     technical_accuracy: float
-
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the feedback evaluation API!"}
 # Define the endpoint to handle batch feedback
 @app.post("/evaluate-feedback-batch", response_model=FeedbackResponse)
 async def evaluate_feedback_batch(feedback: List[FeedbackRequest]):
