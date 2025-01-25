@@ -4,4 +4,4 @@ sentence-transformers==2.2.2
 torch==2.1.2
 uvicorn==0.25.0
 transformers==4.37.2
-numpy==1.26.3
+huggingface_hub==0.21.4
